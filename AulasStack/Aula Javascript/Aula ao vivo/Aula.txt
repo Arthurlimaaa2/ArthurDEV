@@ -1,0 +1,35 @@
+introdução javascricipt
+
+Variáveis:
+    são como gavetas de um armário,
+onde você guarda roupas diferentes e rotula cada gaveta para saber o que tem dentro, 
+podendo trocar ou reorganizar as roupas sempre que precisar
+Guardam espaço na memória para que possam ser utilizadas
+
+VARIÁVEIS EM JS
+Variável "var" (fugir do var - ja existe movimento pra tirar)
+Variável "let"
+Variável "const"
+    
+    JAVA SCRIPT DATA TYPE
+string: para textos
+number: para números
+boolean: para verdadeiro/falso
+undefined: para variáveis não inicializadas
+bigint: Números muito grandes (123n).
+symbol: Valor único e imutável.
+    null: representa "nenhum valor"
+    object: para objetos
+        TypedArray: para arrays
+        Function: para funções
+        Date: para datas
+        RegExp: para expressões regulares
+        Error: para erros
+        arrays: para arrays
+        sets: para conjuntos
+        maps: para mapas
+
+
+
+
+

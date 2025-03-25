@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="img/logo-icon.png" alt="Ícone" class="logo-icon">
+            <h1>Tecnologia Blog</h1>
+        </a>
+    </header>
+
+    <nav class="category-filter">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="Frontend">Frontend</button>
+        <button class="filter-btn" data-filter="Backend">Backend</button>
+        <button class="filter-btn" data-filter="DevOps">DevOps</button>
+    </nav>
+
+    <main class="container">
+        <div class="posts-grid" id="postsContainer"></div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Endereço</h3>
+                <p>Rua das Tecnologias, 123<br>São Paulo - SP</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Tel: (11) 9999-8888<br>Email: contato@techblog.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <a href="https://github.com/techblog" target="_blank">GitHub</a>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- No final do <body> -->
+    <script src="js/posts.js"></script>
+    <script src="js/main.js"></script> <!-- Deve vir DEPOIS de posts.js -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+historia do front end
+
+html css
+depois veio javascript revolução com dinamicas e interativas
+browser netscape 1995
+e dynamic html 
+juntou os 3 avançou muito
+
+
+** FRAMEWORKS
+    ja nos anos 2000
+    jquery -
+    conseguimos adicionas as manipulacoes de DOM e requisisiões de funçoes assincronas
+
+
+** responsividade web
+    - aumennto de disp. moveis se tornou essencial a velocidade (css3 trouxe mediaquery - tamanhos de tela)
+
+** React
+    biblioteca do facebook - todo mundo usa - permite facilidade de construir interfaces responsividade interativa e reativas - intro o concento de virtual - documento de objeto virtual
+    minimiza as autorizaçoes na area do html
+    muito popular a ponto de criaçao de outras bibliotecasn

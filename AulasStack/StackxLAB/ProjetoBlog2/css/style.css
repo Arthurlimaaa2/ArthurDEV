@@ -1,0 +1,256 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Cabeçalho */
+.main-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #2c3e50;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: opacity 0.3s;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Filtros */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #3498db;
+    border-radius: 25px;
+    background: transparent;
+    color: #3498db;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: #3498db;
+    color: white;
+}
+
+/* Posts */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.post-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.main-footer {
+    margin-top: auto;
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.footer-section a:hover {
+    color: #ecf0f1;
+}
+
+/* Página de Post */
+.post-container {
+    line-height: 1.8;
+    padding: 2rem;
+}
+
+.post-container p {
+    text-align: justify;
+    margin: 1.5rem 0;
+    text-indent: 1.5em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* ... (mantenha todo o CSS anterior) ... */
+
+/* Correção das Imagens */
+.post-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+/* Correção Filtros */
+.category-filter {
+    position: relative;
+    z-index: 1;
+}
+
+.filter-btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Conteúdo do Post */
+.post-body {
+    padding: 2rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.post-body p {
+    margin: 1.5rem 0;
+    text-indent: 2em;
+}
+
+.post-body pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+/* Adicione ao style.css */
+.posts-grid:empty::after {
+    content: "Carregando posts...";
+    color: #666;
+    font-style: italic;
+}
+
+post-category {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+.post-category.frontend { background: #3498db; }
+.post-category.backend { background: #2ecc71; }
+.post-category.devops { background: #e67e22; }
+
+.no-posts {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+.post-content {
+    padding: 1rem;
+}
+
+.post-excerpt {
+    color: #666;
+    margin: 1rem 0;
+}

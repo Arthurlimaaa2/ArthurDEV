@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tangled Tree Visualization</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body { margin: 0; }
+        svg { width: 100%; height: 80vh; display: block; margin: 0 auto; }
+        #controls { text-align: center; padding: 10px; background-color: #2b2b2b; }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button onclick="addNode()">Add Node</button>
+        <button onclick="editNode()">Edit Node</button>
+        <button onclick="removeNode()">Remove Node</button>
+    </div>
+    <svg></svg>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

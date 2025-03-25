@@ -1,0 +1,38 @@
+/* style.css */
+
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+svg {
+    background-color: #2b2b2b;
+}
+
+.link {
+    fill: none;
+    stroke: #888888;
+    stroke-width: 2px;
+}
+
+.node circle {
+    fill: #444444;
+    stroke: #aaaaaa;
+    stroke-width: 3px;
+}
+
+.node--level0 circle { fill: #FF0000; } /* Level 0: Red */
+.node--level1 circle { fill: #FF7F00; } /* Level 1: Orange */
+.node--level2 circle { fill: #FFFF00; } /* Level 2: Yellow */
+.node--level3 circle { fill: #7FFF00; } /* Level 3: Green */
+.node--level4 circle { fill: #00FF00; } /* Level 4: Bright Green */
+.node--level5 circle { fill: #00FFFF; } /* Level 5: Cyan */
+.node--level6 circle { fill: #0000FF; } /* Level 6: Blue */
+.node--level7 circle { fill: #8B00FF; } /* Level 7: Violet */
+
+.node text {
+    font-size: 12px;
+    fill: #eeeeee;
+    font-weight: bold;
+}

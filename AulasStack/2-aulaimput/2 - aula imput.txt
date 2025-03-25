@@ -1,0 +1,36 @@
+Input
+Entrada de Dados
+Input de Texto: Utiliza o módulo readline para ler entradas do usuário via terminal.
+
+Input de Arquivo: Utiliza o módulo fs para ler arquivos.
+
+Exemplos:
+Input de Texto:
+
+javascript
+Copy
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Qual o módulo para ler dados no Node? ', (resposta) => {
+    console.log(`Sua resposta: ${resposta}`);
+    rl.close();
+});
+Saída: Pergunta ao usuário e exibe a resposta.
+
+Input de Arquivo:
+
+javascript
+Copy
+const fs = require('fs');
+fs.readFile('arquivo.txt', 'utf8', (err, data) => {
+    if (err) console.error(err);
+    else console.log(data);
+});
+Saída: Conteúdo do arquivo arquivo.txt.
+
+Exercício:
+Crie um arquivo soma.txt com números. Peça ao usuário um número inicial via input de texto e some todos os números do arquivo a esse número. Exiba o resultado.

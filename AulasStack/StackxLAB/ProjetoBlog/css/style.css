@@ -1,0 +1,258 @@
+/* ======================
+   VARIÁVEIS CSS
+   ====================== */
+   :root {
+    --primary-color: #3498db;
+    --text-color: #2c3e50;
+    --bg-color: #f8f9fa;
+    --nav-bg: linear-gradient(135deg, #2c3e50, #3498db);
+    --card-bg: #fff;
+    --border-color: #e0e0e0;
+    --footer-bg: #2c3e50;
+    --footer-text: #ecf0f1;
+}
+
+[data-theme="dark"] {
+    --text-color: #ecf0f1;
+    --bg-color: #2c3e50;
+    --nav-bg: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    --card-bg: #34495e;
+    --border-color: #4a5568;
+    --footer-bg: #1a1a1a;
+}
+
+/* ======================
+   ESTILOS GLOBAIS
+   ====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem 2rem;
+}
+
+/* ======================
+   NAVBAR (Centralizada)
+   ====================== */
+.navbar {
+    background: var(--nav-bg);
+    padding: 1rem 0;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+}
+
+/* ======================
+   BOTÕES (Centralizados)
+   ====================== */
+.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.btn-back:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* ======================
+   POSTS
+   ====================== */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.post-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+/* ======================
+   PÁGINA DE POST COMPLETO
+   ====================== */
+#postContent h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.post-body {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 1.5rem;
+    line-height: 1.8;
+}
+
+.featured-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* ======================
+   RODAPÉ
+   ====================== */
+.site-footer {
+    background: var(--footer-bg);
+    margin-top: auto;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.footer-contato {
+    text-align: center;
+    padding-right: 2rem;
+    border-right: 1px solid var(--border-color);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+    padding-left: 2rem;
+}
+
+.footer-social a {
+    color: var(--footer-text);
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+    transform: translateY(-8px);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-contato {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 2rem;
+    }
+    
+    .footer-social {
+        padding-left: 0;
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+/* ======================
+   TEMA ESCURO
+   ====================== */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
